@@ -14,7 +14,6 @@ public class test02 {
     private static LinkedHashSet<String> t = new LinkedHashSet<>();
 
     public static void main(String[] args) {
-        int record = 0;
         Integer[] line = {0, 5, 10, 0, 11, 14, 13, 4, 11, 8, 8, 7, 1, 4, 12, 11};
 
         while(t.add( Arrays.toString(line).replace(" ,", ""))) {
