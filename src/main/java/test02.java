@@ -9,12 +9,7 @@ public class test02 {
         }
         return m;
     };
-    private static Function<Integer[], String> get_str_value = (n) -> {
-        StringBuilder m = new StringBuilder();
-        for(int i: n) 
-            m.append(i);
-        return m.toString();
-    };
+
 
     private static LinkedHashSet<String> t = new LinkedHashSet<>();
 
@@ -22,8 +17,7 @@ public class test02 {
         int record = 0;
         Integer[] line = {0, 5, 10, 0, 11, 14, 13, 4, 11, 8, 8, 7, 1, 4, 12, 11};
 
-
-        while(t.add( get_str_value.apply(line))) {
+        while(t.add( Arrays.toString(line).replace(" ,", ""))) {
             line = next_value( line);
         }
 
@@ -32,7 +26,7 @@ public class test02 {
 
         int count=0;
         for(String i : t)
-                if(i.equals(get_str_value.apply(line)))
+                if(i.equals(Arrays.toString(line).replace(" ,", "")))
                     break;
                 else
                     count++;
